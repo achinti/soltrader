@@ -17,7 +17,7 @@ export const AppBar: React.FC = () => {
   return (
     <div>
       {/* NavBar / Header */}
-      <div className="navbar flex h-20 flex-row md:mb-2 shadow-lg bg-black text-neutral-content border-b border-zinc-600 bg-opacity-66">
+      <div className="navbar flex h-24 flex-row md:mb-2 shadow-lg bg-black text-neutral-content border-b border-zinc-600 bg-opacity-66">
         <div className="navbar-start align-items-center">
           <div className="hidden sm:inline w-22 h-22 md:p-2 ml-10">
             <Link href="https://solana.com" target="_blank" rel="noopener noreferrer" passHref className="text-secondary hover:text-white">
@@ -47,25 +47,50 @@ export const AppBar: React.FC = () => {
               </svg>
             </Link>
           </div>
-          <WalletMultiButtonDynamic className="btn-ghost btn-sm relative flex md:hidden text-lg " />
+          <button
+            onClick={() =>
+              window.Jupiter.init({
+                displayMode: "modal",
+                endpoint: process.env.NEXT_PUBLIC_ENDPOINT || "https://api.mainnet-beta.solana.com",
+                formProps: {
+                  fixedInputMint: true,
+                  fixedOutputMint: true,
+                  swapMode: "ExactIn",
+                  fixedAmount: false,
+                  initialAmount: "200000000",
+                  initialSlippageBps: 1,
+                },
+              })
+            }
+            className="btn-ghost btn-md relative flex md:hidden text-xl bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-400 hover:to-purple-700 text-white"
+          >
+            Trade Manually
+          </button>
         </div>
 
-        {/* Nav Links */}
         {/* Wallet & Settings */}
         <div className="navbar-end">
           <div className="hidden md:inline-flex align-items-center justify-items gap-6">
-          <NavElement
-            label="Home"
-            href="/"
-            navigationStarts={() => setIsNavOpen(false)}
-          />
-          <NavElement
-            label="Basics"
-            href="/basics"
-            navigationStarts={() => setIsNavOpen(false)}
-          />
-          <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-6 " />
-        </div>
+            <button
+              onClick={() =>
+                window.Jupiter.init({
+                  displayMode: "modal",
+                  endpoint: process.env.NEXT_PUBLIC_ENDPOINT || "https://api.mainnet-beta.solana.com",
+                  formProps: {
+                    fixedInputMint: true,
+                    fixedOutputMint: true,
+                    swapMode: "ExactIn",
+                    fixedAmount: false,
+                    initialAmount: "200000000",
+                    initialSlippageBps: 1,
+                  },
+                })
+              }
+              className="btn-ghost btn-md rounded-btn text-xl mr-6 bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-400 hover:to-purple-700 text-white"
+            >
+              Trade Manually
+            </button>
+          </div>
           <label
               htmlFor="my-drawer"
               className="btn-gh items-center justify-between md:hidden mr-6"
