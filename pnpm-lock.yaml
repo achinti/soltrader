@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@heroicons/react':
-        specifier: ^1.0.5
-        version: 1.0.6(react@18.3.1)
+        specifier: ^2.2.0
+        version: 2.2.0(react@18.3.1)
       '@noble/ed25519':
         specifier: ^1.7.1
         version: 1.7.5
@@ -302,10 +302,10 @@ packages:
     resolution: {integrity: sha512-FD2RizYGInsvfjeaN6O+wQGpRnGVglS1XWrGQr8K7D04AfMmvPodDSw94U9KyFtsVLzWH9kmlPyFM+G4jbmkqg==}
     engines: {node: '>=18.0.0'}
 
-  '@heroicons/react@1.0.6':
-    resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
+  '@heroicons/react@2.2.0':
+    resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
     peerDependencies:
-      react: '>= 16'
+      react: '>= 16 || ^19.0.0-rc'
 
   '@humanwhocodes/config-array@0.9.5':
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
@@ -5224,7 +5224,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@heroicons/react@1.0.6(react@18.3.1)':
+  '@heroicons/react@2.2.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
@@ -8819,7 +8819,7 @@ snapshots:
       eslint: 8.7.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.0(eslint-plugin-import@2.31.0(eslint@8.7.0))(eslint@8.7.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0(eslint-plugin-import@2.31.0(eslint@8.7.0))(eslint@8.7.0))(eslint@8.7.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0)(eslint@8.7.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.7.0)
       eslint-plugin-react: 7.37.5(eslint@8.7.0)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.7.0)
@@ -8849,7 +8849,7 @@ snapshots:
       tinyglobby: 0.2.13
       unrs-resolver: 1.6.0
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0(eslint-plugin-import@2.31.0(eslint@8.7.0))(eslint@8.7.0))(eslint@8.7.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0)(eslint@8.7.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8864,7 +8864,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0(eslint-plugin-import@2.31.0(eslint@8.7.0))(eslint@8.7.0))(eslint@8.7.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.7.0)(typescript@4.9.5))(eslint-import-resolver-typescript@3.10.0)(eslint@8.7.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
